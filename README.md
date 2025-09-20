@@ -1,14 +1,18 @@
 # 1o Desafio MBA Engenharia de Software com IA - Full Cycle
-## ?? Descreva abaixo como executar a sua soluÁ„o.
 
-### PrÈ-requisitos
-- **Python 3.8+** 
+## :: Descreva abaixo como executar a sua solu√ß√£o
+
+### Pr√©-requisitos
+
+- **Python 3.8+**
 - **Docker Desktop**
 
-### Passo a passo para execuÁ„o
+##
 
+### Passo a passo para execu√ß√£o
 
 ## 1. **Clone e configure o ambiente**
+
 ```bash
 git clone https://github.com/marcosfsantos1980/1-mba-ia-desafio-ingestao-busca.git
 cd 1-mba-ia-desafio-ingestao-busca
@@ -16,13 +20,21 @@ cd 1-mba-ia-desafio-ingestao-busca
 # Criar ambiente virtual
 python -m venv venv
 
+venv\Scripts\activate    # para Windows 
 
-# Instalar dependÍncias
+source venv/bin/activate # para Linux/Mac
+
+
+# Instalar depend√™ncias
 pip install -r requirements.txt
 ```
-## 2. **Configure as vari·veis de ambiente  (API key OpenAI)etc **
-- Configure o arquivo `.env`:
+
+## 2. **Configure as vari√°veis de ambiente  (API key OpenAI)etc**
+
+-Configure o arquivo `.env`:
+
 ```env
+
 OPENAI_MODEL='text-embedding-3-small'
 OPENAI_API_KEY='[SUA API KEY]'
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/rag
@@ -31,36 +43,48 @@ PDF_PATH='./document.pdf'
 ```
 
 ## 3. **Suba o Container do banco de dados postgres/pgvector**
+
 ```bash
 docker compose up -d
 ```
 
-## 4. **Verifique se o PDF esta na raiz do projeto **
-- FaÁa o ingest„o do arquivo atraves do  `ingest.py` (somente uma vez) para carregar os dados do PDF
+## 4. **Verifique se o PDF esta na raiz do projeto**
+
+- Fa√ßa a ingest√£o do arquivo atraves do  `ingest.py` (somente uma vez) para carregar os dados do PDF
 no banco de dados
+
 ```bash
   python src\ingest.py
 
 ```
 
 ## 5. **Execute o chat**
+
 ```bash
    python src\chat.py
-```
-- FaÁa sua pergunta
-## 6.  **FUNCIONAMENTO**
 
-**Exemplo pr·tico:**
-- Modelos de perguntas treinadas 
-```
-?? Pergunta: "Qual o valor de faturamento da empresa Zenith Papel e Celulose?"
-?? Resposta: "O valor de faturamento da empresa Zenith Papel e Celulose È de R$ 225.460,35"
-
-?? Pergunta: "Qual foi o menor valor de faturamento?"
-?? Resposta: "O menor valor de faturamento È de R$ 225.460,35 da empresa Zenith Papel e Celulose EPP, fundada em 1931"
-
-?? Pergunta: "Qual È a capital do Amap·?" (fora do contexto)
-?? Resposta: "N„o tenho informaÁıes necess·rias para responder sua pergunta."
 ```
 
-## boa divers„o
+- Fa√ßa sua pergunta
+
+## 6.  **Funcionamento**
+
+-Caso tenha instalado tudo corretamente o Chat ser√° inicializado e voc√™ poder√° come√ßara fazer sua pergunta.
+
+**Exemplo pr√°tico:**
+-Modelos de perguntas treinadas:
+
+```bash
+
+ :: Pergunta: "Qual o valor de faturamento da empresa Zenith Papel e Celulose?"
+ :: Resposta: "O valor de faturamento da empresa Zenith Papel e Celulose ÔøΩ de R$ 225.460,35"
+
+ :: Pergunta: "Qual foi o menor valor de faturamento?"
+ :: Resposta: "O menor valor de faturamento √© de R$ 225.460,35 da empresa Zenith Papel e Celulose EPP, fundada em 1931"
+
+ :: Pergunta: "Qual √© a capital do Amap√°?" (fora do contexto)
+ :: Resposta: "N√£o tenho informa√ß√µe necess√°rias para responder sua pergunta."
+
+```
+
+## Boa Divers√£o

@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 OPENAI_MODEL='text-embedding-3-small'
 OPENAI_API_KEY='[SUA API KEY]'
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/rag
+DATABASE_URL='postgresql+psycopg://postgres:postgres@localhost:5432/ragdb'
 PG_VECTOR_COLLECTION_NAME='gpt5_collection'
 PDF_PATH='./document.pdf'
 ```

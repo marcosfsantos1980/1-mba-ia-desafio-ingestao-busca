@@ -77,7 +77,7 @@ no banco de dados
 ```bash
 
  :: Pergunta: "Qual o valor de faturamento da empresa Zenith Papel e Celulose?"
- :: Resposta: "O valor de faturamento da empresa Zenith Papel e Celulose � de R$ 225.460,35"
+ :: Resposta: "O valor de faturamento da empresa Zenith Papel e Celulose é de R$ 225.460,35"
 
  :: Pergunta: "Qual foi o menor valor de faturamento?"
  :: Resposta: "O menor valor de faturamento é de R$ 225.460,35 da empresa Zenith Papel e Celulose EPP, fundada em 1931"
